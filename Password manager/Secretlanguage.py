@@ -52,5 +52,4 @@ def decode(s):
         else:    #if the length of string is smaller than 3 it comes in this else block
             nstr.append(word[::-1])    #this line reverses the string and append it in  nstr list   
     return f_str.join(nstr)   #returns the decoded string
-print(encode(""))
-print(decode("EMyhosdiwalabEvO bGnajrGQx LftishramcSf"))
+
