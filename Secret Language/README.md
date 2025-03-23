@@ -1,4 +1,4 @@
-#🕵️‍♂️ Secret Language 🔐
+🕵️‍♂️ Secret Language 🔐
 
 ✨ Description
 
