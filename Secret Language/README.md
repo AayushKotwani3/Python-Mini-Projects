@@ -1,8 +1,8 @@
-🕵️‍♂️ Secret Code Translator 🔐
+#🕵️‍♂️ Secret Language 🔐
 
 ✨ Description
 
-The Secret Code Translator is a Python program that encodes and decodes messages based on specific rules. It can be used to convert text into a secret language and decode it back.
+The Secret Language is a Python program that encodes and decodes messages based on specific rules. It can be used to convert text into a secret language and decode it back.
 
 🚀 Features
 
