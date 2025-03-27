@@ -4,9 +4,9 @@
           2 P W  D  L
           3 S L  W  D
 '''
-import random
+import random # Importing random module for computer's choice
 
-
+# Function to return the corresponding string for a numerical choice
 def choice(choice):
     if choice==1:
         return "Rock"
@@ -15,8 +15,9 @@ def choice(choice):
     elif choice==3:
         return "Scissor"
     
-def check(comp,user):
-    if (comp==1 and user==1) or (comp==2 and user==2) or (comp==3 and user==3):
+# Function to check the outcome of the round    
+def check(comp,user):   # If both choices are the same
+    if (comp==user): # If both choices are the same
         return "Draw"
     elif (comp==1 and user==2) or (comp==2 and user==3) or (comp==3 and user==1):
         return "Win"
