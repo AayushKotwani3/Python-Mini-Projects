@@ -1,4 +1,4 @@
-# Rock-Paper-Scissors Game \U0001F91C✌️
+# Rock-Paper-Scissors Game \🤜 📰 ✌️
 
 This is a simple **Rock-Paper-Scissors** game written in Python, where a player competes against the computer. The game follows the classic rules of Rock-Paper-Scissors, and the player can choose the number of rounds they wish to play.
 
