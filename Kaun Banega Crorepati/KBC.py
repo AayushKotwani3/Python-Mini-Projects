@@ -1,5 +1,6 @@
 # --- WELCOME TO KAUN BANEGA CROREPATI ---
 
+# List of all questions, options, and correct answers
 Questions=[['Which of these vehicles in India usually has only 3 wheels?','motorbike','Bus','truck','auto rickshaw','d'],
            ['which of the following contains both letters and numbers?','Aadhaar uid','mobile number','Pin Code','Pan','d'],
            ['Which word will come in the blank space in “Ab pachtay hote kya, jab _____ chug gayi khet”?','Cat','Squirrel','Bird','Spider','c'],
@@ -18,32 +19,40 @@ Questions=[['Which of these vehicles in India usually has only 3 wheels?','motor
            ['What was the title of the thesis that Dr B R Ambedkar submitted to the London School of Economics for which he was awarded his doctorate in 1923?','The wants and Means of India ','The Problem of the Rupee','National Dividend of India',' The Law and Lawyers','b'],
            ['Milinda-Panha is a dialogue between King Menander or Milinda and which Buddhist monk? ','Asanga','Nagasena ','Mahadharmarakshita ','Dharmaraksita','b']]
 
+# List of prize money corresponding to each question level
 levels=[1000,2000,3000,5000,10000,20000,40000,80000,160000,320000,640000,1250000,2500000,5000000,7500000,10000000,70000000]
 money=0
 Wrong_answer=True
 
+# Loop through each question
 for i in range(len(Questions)):
     while True:
-        
+        # Display the current question and options
         print(f'''Question for Rs.{levels[i]} is:
               {Questions[i][0]}\n''')
         print(f'''          Give answer in range(a-d) or press q to quit.    
               a. {Questions[i][1]}         b. {Questions[i][2]}
               c. {Questions[i][3]}         d. {Questions[i][4]}\n''')
         j=input()
+        # Validate if the user input is within the expected range
         if j not in ['a','b','c','d','q']:
             print("Enter valid option from range(a-d) or press q to quit")
             continue
+        # If correct answer
         if(j==Questions[i][-1]):
             print(f"Hurray you won {levels[i]}\n")
             money=levels[i]
+            # If the user wins the final prize
             if(money==70000000):
                 print("Congratulations You Won The Game")
-            break          
+            break  
+        # If player chooses to quit        
         elif(j=='q'):
             print(f'Congratulations you won {levels[i-1]}')
             break
+         # If wrong answer given
         else:
+            # Provide minimum guaranteed prize money based on level
             if (money>=10000 and money<320000):
                 print('Better luck next time you Won Rs.10000')
                 Wrong_answer=False
@@ -54,9 +63,10 @@ for i in range(len(Questions)):
                 print('Better luck next time you Won Rs.0')
                 Wrong_answer=False
             break 
+    # Check if player chose to quit or answered incorrectly    
     if j=='q':
         break 
     elif (Wrong_answer==False):
         break
-
+# Game End Message
 print("The Game Ends")
